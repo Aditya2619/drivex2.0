@@ -21,7 +21,7 @@ function DashboardMain() {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
-  const API_URL = "http://localhost:3001/api";
+  const API_URL = "https://drivex2-0-server.onrender.com/api";
 
   useEffect(() => {
     const storedUser = localStorage.getItem("driveCloneUser");
@@ -196,7 +196,7 @@ function DashboardMain() {
     const parts = filePath.split("/");
     const filename = parts[parts.length - 1];
 
-    return `http://localhost:3001/uploads/${filename}`;
+    return `https://drivex2-0-server.onrender.com/uploads/${filename}`;
   };
 
   const handleDelete = async (fileId) => {

@@ -47,7 +47,7 @@ function App() {
             expiresIn: user.expires_in
           };
           
-          return axios.post('http://localhost:3001/api/auth/google', userData);
+          return axios.post('https://drivex2-0-server.onrender.com/api/auth/google', userData);
         })
         .then((response) => {
           localStorage.setItem('driveCloneUser', JSON.stringify(response.data.user));
