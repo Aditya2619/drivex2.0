@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardMain from "./authenticated/dashboard.jsx";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import NotFound from "./NotFound.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/dashboard" element={<DashboardMain />} />
+          <Route path="*" element={<NotFound/>}></Route>
         </Routes>
       </BrowserRouter>
     </GoogleOAuthProvider>
